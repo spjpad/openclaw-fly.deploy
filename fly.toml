@@ -8,13 +8,9 @@ primary_region = "bom"
   NODE_ENV = "production"
   OPENCLAW_STATE_DIR = "/data"
 
-[processes]
-  app = "gateway run --bind lan --allow-unconfigured --port 8080"
-
 [http_service]
   internal_port = 8080
   force_https = true
-  processes = ["app"]
 
 [[vm]]
   size = "shared-cpu-1x"

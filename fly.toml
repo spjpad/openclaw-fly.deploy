@@ -16,4 +16,4 @@ primary_region = "bom"
 
 [[vm]]
   size = "shared-cpu-1x"
-  memory = "2048mb"    # Changed from 256mb to 1GB
+  memory = "4096mb"    # Changed from 256mb to 1GB

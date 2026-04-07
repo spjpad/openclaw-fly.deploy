@@ -7,6 +7,9 @@ primary_region = "bom"
 [env]
   NODE_ENV = "production"
   OPENCLAW_STATE_DIR = "/data"
+  OPENCLAW_GATEWAY_BIND = "lan"
+  OPENCLAW_CONTROLUI_DANGEROUSLY_ALLOW_HOST_HEADER_ORIGIN_FALLBACK = "true"
+  PORT = "8080"
 
 [http_service]
   internal_port = 8080

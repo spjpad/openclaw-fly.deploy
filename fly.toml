@@ -1,0 +1,27 @@
+app = "openclaw-shopify"
+primary_region = "bom"
+
+[build]
+  image = "ghcr.io/openclaw/openclaw:latest"
+
+[env]
+  NODE_ENV = "production"
+  OPENCLAW_STATE_DIR = "/data"
+
+[processes]
+  app = "gateway run --bind lan --allow-unconfigured --port 3000"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+[[vm]]
+  size = "shared-cpu-2x"
+  memory = "2048mb"
+
+[mounts]
+  source = "openclaw_data"
+  destination = "/data"
